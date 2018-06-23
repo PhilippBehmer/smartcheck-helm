@@ -177,7 +177,7 @@ service:
   ## See also: https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services---service-types
   ##
   ## Default value: LoadBalancer
-  type: LoadBalancer
+  type: ClusterIP
 
   ## httpsPort is the port where the service will listen for HTTPS requests.
   ##
@@ -296,7 +296,7 @@ persistence:
   ## enabled is whether a persistent volume claim should be created for database storage.
   ## If no persistent volume claim is created, then the database will be lost every time the
   ## database container restarts.
-  enabled: true
+  enabled: false
 
   ## storageClassName is the name of the storage class that should be used for persistent volumes.
   ## If no value is specified, then `storageClassName` is left out of the persistent volume claim.
